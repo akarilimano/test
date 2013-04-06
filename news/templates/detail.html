@@ -1,10 +1,23 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-        "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-    <title></title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block title %}
+    {{ block.super }}
+{% endblock%}
+
+{% block content %}
+    <h1> {{ title }}</h1>
+    <h2>Номер этой новости - {{ id }}</h2>
+    <h2>{{ new_title }}</h2>
+    <b>{{ thisnew.summary }}</b>
+    <br>
+    {{ thisnew.fulltext }}
+    {{ block.super }}
+
+    <ul>
+        {% for news in news_list %}
+            <a href="/new/{{ news.id }}"  ><li>{{ news.title }}</li></a>
+            <br>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

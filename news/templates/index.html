@@ -11,6 +11,7 @@
     <ul>
     {% for news in news_list %}
         <a href="/new/{{ news.id }}"  ><li>{{ news.title }}</li></a>
+        {{ news.summary }}
         <br>
     {% endfor %}
     </ul>
