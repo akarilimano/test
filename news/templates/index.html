@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ block.super }}
+{% endblock%}
+
+{% block content %}
+    <h1> {{ title }}</h1>
+    {{ block.super }}
+
+    <ul>
+    {% for news in news_list %}
+        <a href="/new/{{ news.id }}"  ><li>{{ news.title }}</li></a>
+        <br>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
