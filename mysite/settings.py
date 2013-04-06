@@ -4,8 +4,9 @@
 import os
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('safonovau', 'alex.saif@gmail.com'),
 )
+
 
 MANAGERS = ADMINS
 
@@ -116,6 +117,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'news',
 )
 
 # A sample logging configuration. The only tangible logging
